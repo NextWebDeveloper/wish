@@ -16,7 +16,7 @@ body
 	line-height: 1.65
 	font-family: $default-font
 	overflow-x: hidden
-	color: $text
+	color: $text47
 	input, textarea
 		border: #666 1px solid
 		outline: none
@@ -38,6 +38,59 @@ body
 b, strong
 	font-weight: bold
 
+a
+	color: $text47
+	text-decoration: none
+	&:hover, &:active
+		color: $accent
+		text-decoration: none
 
+.header
+	width: 100%
+	position: fixed
+	background-color: #fff
+	.header__wrapper
+		display: flex
+		align-items: center
+		padding: 20px 60px
+		.header__logo
+			a
+				font-size: 30px
+				font-family: $font-bold
+		.header__nav
+			margin-left: 250px
+			.nav__link
+				display: inline-block
+				font-size: 12px
+				margin-right: 50px
+				font-weight: 600
+				letter-spacing: 2.4px
+				&:last-child
+					margin-right: 0
+		.header__search
+			margin-right: 120px
+			margin-left: auto
+			.search__form
+				.search__input
+				.search__button
+		.header__icons
+			margin-right: 140px
+			.icon
+				display: inline-block
+				width: 20px
+				height: 20px
+				margin-right: 1rem
+				&:last-child
+					margin-right: 0
+				img 
+					width: 100%
+				.icon__counter
+					.counter__num	
+		.header__menu
+
+.idk
+	width: 100%
+	height: 200vh
+	background-color: green
 
 @import "media" // Always at the end
