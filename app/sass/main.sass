@@ -45,6 +45,41 @@ a
 		color: $accent
 		text-decoration: none
 
+h1,h2,h3,h4,h5,h6 
+	font-family: $header-font
+
+/* Custom properties start here */
+
+div[class$="__logo"]
+	a
+		font-size: 30px
+		font-family: $header-fontBold
+
+.search__form
+	position: relative
+	.search__input
+		padding: 5px 20px
+		font-size: 14px
+		background-color: rgb(249, 245, 245)
+	.search__button
+		position: absolute
+		right: 5px
+		top: 4px
+		background-color: transparent
+		border: none
+		outline: none
+		cursor: pointer
+
+.nav__link
+	display: inline-block
+	font-size: 12px
+	margin-right: 50px
+	font-weight: 600
+	letter-spacing: 2.4px
+	text-transform: uppercase
+
+/* Custom properties end here */
+
 .header
 	width: 100%
 	position: fixed
@@ -53,26 +88,16 @@ a
 		display: flex
 		align-items: center
 		padding: 20px 60px
-		.header__logo
-			a
-				font-size: 30px
-				font-family: $font-bold
+		.header__logo                // Custom property
 		.header__nav
 			margin-left: 250px
-			.nav__link
-				display: inline-block
-				font-size: 12px
-				margin-right: 50px
-				font-weight: 600
-				letter-spacing: 2.4px
+			.nav__link                 // Custom property
 				&:last-child
 					margin-right: 0
 		.header__search
 			margin-right: 120px
-			margin-left: auto
-			.search__form
-				.search__input
-				.search__button
+			margin-left: auto			
+			.search__form               // Custom property
 		.header__icons
 			margin-right: 140px
 			.icon
@@ -80,13 +105,81 @@ a
 				width: 20px
 				height: 20px
 				margin-right: 1rem
+				position: relative
 				&:last-child
 					margin-right: 0
 				img 
 					width: 100%
 				.icon__counter
+					position: absolute
+					top: 75%
+					left: -25%
+					width: 16px
+					height: 16px
+					border-radius: 50%
+					background-color: darken($accent, 10%)
+					text-align: center
 					.counter__num	
+						color: #ffffff
+						font-size: 11px
+						margin: 0
 		.header__menu
+
+.asideNav
+	position: fixed
+	width: 350px
+	height: 100vh
+	background-color: #fff
+	right: -350px
+	top: 69.5px
+	display: flex
+	flex-direction: column
+	align-items: flex-end
+	padding: 30px 50px
+	transition: right 0.5s ease
+	&.asideNav_visible
+		right: 0
+	.asideNav__close
+		background-color: transparent
+		border: none
+		outline: none
+		cursor: pointer
+	.asideNav__logo	          // Custom property
+		margin: 0 0 50px
+	.asideNav__search
+		.search__form           // Custom property
+	.asideNav__nav
+		margin-top: 70px
+		display: flex
+		flex-direction: column
+		align-items: flex-end
+		.nav__link              // Custom property
+			margin-right: 0
+			margin-bottom: 20px
+
+.poster
+	width: 100%
+	height: 900px
+	.poster__wrapper
+		width: 100%
+		height: 100%
+		background: url('../img/home_slider_1.jpg') no-repeat center /cover
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		.poster__promoPrices
+			color: #ffffff
+			font-size: 18px
+			background-color: #2f2f2f
+			padding: 10px 25px
+			margin: 0
+		.poster__newCollection	
+			color: #ffffff
+			font-size: 72px
+			background-color: #937c6f
+			line-height: 100px
+			padding: 0 20px
 
 .idk
 	width: 100%

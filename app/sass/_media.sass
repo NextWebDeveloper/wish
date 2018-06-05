@@ -29,3 +29,57 @@
 
 // ≤1200px
 +media-breakpoint-up(xl)
+
+/* Header transformations on smaller screens start */
+@media only screen and (max-width:1600px)
+	.header
+		.header__wrapper
+			.header__nav
+				margin-left: 100px
+
+@media only screen and (max-width:1450px)
+	.header
+		.header__wrapper
+			.header__nav
+				margin-left: 50px				
+
+@media only screen and (max-width:1450px)
+	.header
+		.header__wrapper
+			.header__search
+				display: none				
+			.header__icons
+				margin-left: auto	
+				margin-right: 50px
+
+@media only screen and (max-width:992px)
+	.header
+		.header__wrapper
+			.header__nav
+				display: none			
+/* Header transformations on smaller screens end */
+
+/* Poster.poster headers decrease start  */	
+@media only screen and (max-width:992px)
+	.poster
+		.poster__wrapper
+			.poster__promoPrices
+				font-size: 18px
+				padding: 10px 25px
+			.poster__newCollection	
+				font-size: 60px
+				line-height: 100px
+				padding: 0 20px				
+
+@media only screen and (max-width:576px)
+	.poster
+		height: 100vh
+		.poster__wrapper
+			.poster__promoPrices
+				font-size: 14px
+				padding: 10px 25px
+			.poster__newCollection	
+				font-size: 40px
+				line-height: 100px
+				padding: 0 20px					
+/* Poster.poster headers decrease end  */					
