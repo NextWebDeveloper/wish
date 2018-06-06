@@ -12,6 +12,23 @@ $(function() {
 	// Show-hide aside menu
 	$('.header__menu').on('click', function() {
 		$('.asideNav').toggleClass('asideNav_visible');
- 	});
+	 });
+	 
+	// Aside blocks to center
+	function resizeScrenn(){
+		var width = $(window).width();
+		if (width < 1200) {
+			$('#main').children().removeClass('container-fluid').addClass('container');
+		} else {
+			$('#main').children().removeClass('container').addClass('container-fluid');
+		}
+	}
+	resizeScrenn();
+	$(window).resize(function(){
+		resizeScrenn();
+	});
+
 
 });
+
+
