@@ -138,6 +138,7 @@ div[class$="__logo"]
 	align-items: flex-end
 	padding: 30px 50px
 	transition: right 0.5s ease
+	z-index: 150
 	&.asideNav_visible
 		right: 0
 	.asideNav__close
@@ -190,47 +191,47 @@ div[class$="__logo"]
 
 /* Section Promo Prices starts here */
 
-.promoPrices__text
+.promoPrices__text, .newArrivals__text
 	letter-spacing: 2.8px
 	font-size: 14px
 	color: $accent
 	text-align: center
 	margin: 70px 0 0 0
 
-.promoPrices__title	
+.promoPrices__title, .newArrivals__title	
 	font-size: 60px
 	text-align: center
 	margin: 0
 	line-height: 70px
 
-.promoPrices__cards
-	.promoPrices__card
-		margin-top: 20px
-		.pp-card__inner
-			position: relative
-			.pp-card-inner__img
-				width: 100%
-			.pp-card-inner__offer
-				position: absolute
-				.pp-card-inner__title
-					color: #ffffff
-					font-size: 30px
-					margin: 0
-				.pp-card-inner__text	
-					color: #ffffff
-					font-size: 14px
-					font-weight: 600
-					margin: 0
-					text-transform: uppercase
-		.pp-card__title
-			font-size: 18px
-			display: block
-			color: #ffffff
-			background-color: #232323	
-			padding: 20px 0
-			text-align: center
-			&:hover, &:active
-				color: darken($accent, 10%)
+
+.promoPrices__card
+	margin-top: 20px
+	.pp-card__inner
+		position: relative
+		.pp-card-inner__img
+			width: 100%
+		.pp-card-inner__offer
+			position: absolute
+			.pp-card-inner__title
+				color: #ffffff
+				font-size: 30px
+				margin: 0
+			.pp-card-inner__text	
+				color: #ffffff
+				font-size: 14px
+				font-weight: 600
+				margin: 0
+				text-transform: uppercase
+	.pp-card__title
+		font-size: 18px
+		display: block
+		color: #ffffff
+		background-color: #232323	
+		padding: 20px 0
+		text-align: center
+		&:hover, &:active
+			color: darken($accent, 10%)
 
 .pp-card-inner__offer_1
 	right: 2%
@@ -252,5 +253,62 @@ div[class$="__logo"]
 	text-align: right
 
 /* Section Promo Prices ends here */
+
+/* Section New Arrivals starts here */
+
+.na-card
+	margin-top: 20px
+	.na-card__img
+		img 
+			width: 100%
+	.na-card__rating
+		margin: 1rem 0
+		height: 15px
+		background-image: url(../img/star_1.svg)
+		width: 85px
+		.na-card__rating_color
+			height: 100%
+			background: url(../img/star_2.svg)		
+			width: 75px
+	.newProduct
+		display: flex
+		justify-content: space-between
+		align-items: center
+		.newProduct__info			
+			.newProduct__name
+				color: #000000
+				font-weight: 600
+				&:hover, &:active
+					color: $accent
+			.newProduct__price
+				color: rgb(138, 138, 138)
+				font-size: 24px
+				font-weight: 600
+		.newProduct__options
+			display: flex
+			.newProduct__buy
+				display: inherit
+				justify-content: center
+				align-items: center
+				background-color: $accent
+				width: 40px
+				height: 40px
+				text-align: center
+				margin: 0 5px	
+				&:hover, &:active
+					background-color: #2f2f2f
+			.newProduct__addToFavourite	
+				display: inherit
+				justify-content: center
+				align-items: center
+				background-color: #cccfcf				
+				width: 40px
+				height: 40px
+				text-align: center
+				&:hover, &:active
+					background-color: #2f2f2f
+					color: #ffffff
+
+/* Section New Arrivals ends here */	
 
 @import "media" // Always at the end
