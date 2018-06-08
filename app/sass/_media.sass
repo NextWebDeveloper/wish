@@ -90,6 +90,12 @@
 				padding: 0 20px					
 /* Poster.poster headers decrease end  */					
 
+/* Decrease font-size of sections headers on small screens start */
+@media only screen and (max-width:576px)	
+	.promoPrices__title, .newArrivals__title, .subscribe__title	
+		font-size: 40px
+/* Decrease font-size of sections headers on small screens end */
+
 /* Show/hide background image of benefits block start */
 @media only screen and (min-width:1200px) and (max-width:1510px)	
 	.benefits__block
@@ -118,12 +124,40 @@
 		margin-top: 2rem
 /* Bottom banners section end */			
 
+/* Wish tags section start */
 @media only screen and (max-width:576px)
-	.tags__link
-		font-size: 30px	
+	.tags
+		.tags__link
+			font-size: 30px	
 
 @media only screen and (max-width:768px)
 	.tags
 		flex-direction: column
 		.tags__link
 			margin-right: 0
+/* Wish tags section end */
+
+/* Subscribe section start */	
+@media only screen and (max-width:576px)	
+	.subscribe
+		margin: 70px 0 0
+
+	.subscribe__form
+		.subscribe__input
+			width: 100%
+		.subscribe__button
+			display: block
+			margin: 20px auto
+/* Subscribe section end */
+
+/* Footer start */
+@media only screen and (max-width:576px)	
+	.f-nav
+		display: flex
+		flex-direction: column
+		.f-nav__link
+			margin-right: 0
+			margin-bottom: 1em
+			&:last-child
+				margin-bottom: 0
+/* Footer end */
