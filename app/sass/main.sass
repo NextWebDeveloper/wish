@@ -442,7 +442,7 @@ div[class$="__logo"]
 		background-color: $accent
 		padding: 10px 15px	
 		text-transform: uppercase
-
+	
 .bb-banner_2
 	background: url('../img/extra_2.jpg') no-repeat center /cover
 	border: 2px solid $accent
@@ -473,6 +473,31 @@ div[class$="__logo"]
 			z-index: 2
 /* Bottom banners section ends here */	
 
+/* Wish tags section starts here */	
+.wish-tags
+	margin-top: 70px	
+	padding: 90px 40px 40px 40px
+	text-align: center
+	background: url('../img/gallery.jpg') no-repeat center /cover
 
-	
+.tags
+	display: flex
+	justify-content: center
+	.tags__link	
+		color: #ffffff
+		font-size: 36px
+		font-family: $header-fontBold
+		margin-right: 40px
+		&:last-child
+			margin-right: 0
+
+.wish-tags__subtext
+	color: #ffffff	
+	font-size: 14px
+	margin: 1rem 0 2rem	
+
+
+/* Wish tags section ends here */	
+
+
 @import "media" // Always at the end

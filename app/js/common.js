@@ -15,7 +15,7 @@ $(function() {
 		$('.asideNav').toggleClass('asideNav_visible');
 	 });
 	 
-	// Aside blocks to center
+	// Aside blocks move to center at screen resizing
 	function resizeScrenn(){
 		var width = $(window).width();
 		if (width < 1200) {
@@ -27,6 +27,26 @@ $(function() {
 	resizeScrenn();
 	$(window).resize(function(){
 		resizeScrenn();
+	});
+
+	//Wish instagram tags section carousel
+	$('.owl-carousel').owlCarousel({
+		loop:true,
+		autoplay:true,
+		dots:false,
+		margin: 10,
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:6
+        }
+    }
 	});
 
 
