@@ -3,9 +3,10 @@ $(function() {
 	// Making top navbar thinner at scroll
 	$(window).scroll(function(){
 		if ($(this).scrollTop() > 0) {
-			$('.header__wrapper').css('padding', '10px 60px');
+			$('.header__wrapper').css({'padding-top':'10px', 'padding-bottom':'10px'});
+
 		} else {
-			$('.header__wrapper').css('padding', '20px 60px');
+			$('.header__wrapper').css({'padding-top':'20px', 'padding-bottom':'20px'});
 		}
 	});
 
