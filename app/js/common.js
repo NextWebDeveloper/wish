@@ -1,5 +1,11 @@
 $(function() {
 
+	// Preloader
+	setTimeout(function() {
+		$("#preload").delay(500).fadeOut("slow");
+		// $("#preloader").delay(500).fadeOut("slow");
+	}, 3000);
+
 	// Making top navbar thinner at scroll
 	$(window).scroll(function(){
 		if ($(this).scrollTop() > 0) {

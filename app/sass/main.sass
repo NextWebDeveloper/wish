@@ -25,6 +25,127 @@ body
 		&:required:valid
 			border-color: green
 
+/* Preloader starts */
+$var1: #000000
+$var2: #ffffff
+
+html, body 
+	margin: 0
+	padding: 0
+	height: 100%
+	min-height: 100%
+
+/* Preload */
+
+@keyframes firstSegment 
+	from
+		width: 0%
+	to 
+		width: 100%
+
+@keyframes secondSegment 
+	from
+		height: 0%
+	to 
+		height: 100%
+
+@keyframes thirdSegment 
+	from
+		width: 0%
+	to 
+		width: 100%
+
+@keyframes fourthSegment 
+	from
+		height: 0%
+	to 
+		height: 100%
+
+@keyframes preloading 
+	from
+		width: 100px
+		height: 100px
+		top: 50%
+		left: 50%
+		margin: -50px 0 0 -50px
+		background: $var1
+	to 
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		margin: 0
+		background: $var2
+
+#preload 
+	width: 100%
+	height: 100%
+	background: $var1
+	position: absolute
+	top: 0
+	left: 0
+	z-index: 99999999999999999
+
+#preloader 
+	width: 100px
+	height: 100px
+	position: absolute
+	top: 50%
+	left: 50%
+	margin: -50px 0 0 -50px
+	background: $var1
+	animation: preloading 2s ease-out 2.5s both
+	&-content 
+		width: 100%
+		height: 100%
+		position: absolute
+		&:before 
+			content: ' '
+			display: block
+			height: 1px
+			width: 0%
+			background: $var2
+			position: absolute
+			bottom: 0
+			right: 0
+			animation: thirdSegment 0.5s linear 1.5s both		
+		&:after 
+			content: ' '
+			display: block
+			height: 0%
+			width: 1px
+			background: $var2
+			position: absolute
+			left: 0
+			bottom: 0
+			animation: fourthSegment 0.5s linear 2s both
+		
+	
+	&:before 
+		content: ' '
+		display: block
+		height: 1px
+		width: 0%
+		background: $var2
+		position: absolute
+		animation: firstSegment 0.5s linear 0.5s both
+	
+	&:after 
+		content: ' '
+		display: block
+		height: 0%
+		width: 1px
+		background: $var2
+		position: absolute
+		right: 0
+		animation: secondSegment 0.5s linear 1s both
+	
+
+
+	
+/* Preloader ends */
+
+
 .img-responsive
 	display: block
 	max-width: 100%
